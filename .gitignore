@@ -11,5 +11,5 @@ settings.py
 
 # Compiled css
 .sass-cache
-polar/static/stylesheets/css/*.css
+polar/static/stylesheets/*.css
 .ds_store
