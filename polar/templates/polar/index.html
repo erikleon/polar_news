@@ -1,0 +1,28 @@
+{% extends "polar/base.html" %}
+{% block content %}
+<div class="">
+  <h1>Break out of your news bias</h1>
+  <h3>Search for contrasting perspectives on topics that matter</h3>
+  <form  action="/get_polar/" method="POST" id="post-form">
+    {% csrf_token %}
+    {{ form.query }}
+    <input type="submit" value="Search" name="submit">
+  </form>
+  <div class="loader"></div>
+  <div class="results">
+    <div class="column left">
+      <ul class="article-list">
+
+      </ul>
+    </div>
+    <div class="column right">
+      <ul class="article-list">
+
+      </ul>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+

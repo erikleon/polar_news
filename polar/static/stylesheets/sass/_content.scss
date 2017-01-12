@@ -1,0 +1,123 @@
+html, body {
+  height: 100%;
+  position: relative;
+
+}
+
+.site-width {
+  position: relative;
+  width: 992px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.loader {
+  height: 4px;
+  width: 100%;
+  margin: 20px 0 0 0;
+  position: relative;
+  overflow: hidden;
+  background-color: #ddd;
+
+  &:before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 4px;
+    background: -webkit-linear-gradient(90deg, rgb(72, 192, 230), rgb(72, 192, 230), rgb(252, 13, 27), rgb(252, 13, 27));
+    background: linear-gradient(90deg, rgb(72, 192, 230), rgb(72, 192, 230), rgb(252, 13, 27), rgb(252, 13, 27));
+  }
+
+  &.active {
+    &:before {
+      animation: loading 2s linear infinite;
+    }
+  }
+
+  &.success {
+    &:before {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes loading {
+  from {left: -200px; width: 30%;}
+  50% {width: 30%;}
+  70% {width: 70%;}
+  80% { left: 50%;}
+  95% {left: 120%;}
+  to {left: 100%;}
+}
+
+.results {
+  @include display-flex();
+  @include flex-direction(row);
+  opacity: 0;
+  max-height: 0;
+  height: 100%;
+  @include transition(opacity 200ms, max-height 200ms);
+
+  &.success {
+    opacity: 1;
+    max-height: 100%;
+  }
+
+  .column {
+    @include display-flex();
+    @include flex-grow(1);
+    max-width: 50%;
+    width: 100%;
+
+    &.left {
+      border-right: 1px solid black;
+
+      ul {
+        li {
+          a {
+            padding: 0 20px 0 0;
+          }
+        }
+      }
+    }
+
+    &.right {
+      border-left: 1px solid black;
+
+      ul {
+        li {
+          a {
+            padding: 0 0 0 20px;
+          }
+        }
+      }
+    }
+
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow: hidden;
+
+      li {
+        padding: 10px 0;
+        border-bottom: 2px solid black;
+
+        a {
+          display: block;
+          font-family: $font-family;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

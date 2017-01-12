@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="{% static 'images/icon.png' %}" type="image/x-icon" />
+  <title>BETA - Polar News - BETA</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/css/styles.css' %}">
+</head>
+<body>
+  <nav class="site-width center">
+    <a class="logo">
+      <img src="{% static 'images/logo.png' %}" alt="Polar News">
+    </a>
+  </nav>
+  <div class="content site-width">
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer class="site-width">
+    <span class="">
+      <a class="social" href="//facebook.com/PolarNews" target="_blank">
+        <span class="icon facebook"></span>
+      </a>
+      <a class="social" href="//twitter.com/getpolarnews" target="_blank">
+        <span class="icon twitter"></span>
+      </a>
+      <a class="social" href="mailto:getpolarnews@gmail.com" target="_blank">
+        <span class="icon mail"></span>
+      </a>
+    </span>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

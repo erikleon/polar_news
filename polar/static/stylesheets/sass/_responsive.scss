@@ -1,0 +1,184 @@
+@media (max-width: 1024px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+ 
+  .section.left-justify {
+    padding-right: 0;
+  }
+
+  .section.right-justify {
+    padding-left: 0;
+  }
+
+  .dash-list {
+    @include display-flex();
+    @include justify-content(center);
+    @include align-items(flex-start);
+    @include flex-direction(column);
+  }
+
+}
+
+@media (max-width: 893px) {
+  .navigation-list {
+
+    li {
+      margin: 0 10px;
+
+
+      &:first-child {
+        margin: 0 10px 0 0;
+      }
+
+      &:last-child {
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 844px) {
+  .navigation-list {
+
+    li {
+      margin: 0 5px;
+
+
+      &:first-child {
+        margin: 0 5px 0 0;
+      }
+
+      &:last-child {
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 793px) {
+
+  .main-navigation {
+
+    .site-contact {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .navigation-list {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-level {
+    @include flex-direction(column);
+  }
+
+  .top-level > .tile-column {
+    @include flex-wrap(wrap);
+    min-width: 100%;
+  }
+
+  .tile-container {
+    @include flex-direction(column);
+
+    .tile-column {
+      width: 100%;
+    }
+
+    .tile-info {
+      @include display-flex();
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+  }
+
+  .tile-container .tile-row.short {
+    max-height: none;
+  }
+
+  .tile-container .tile.promotional .tile-info {
+    padding: 20px;
+  }
+
+  .details .half {
+    max-width: 100%;
+  }
+
+  .details .half .description,
+  .details .half .special-features {
+    padding: 0 0 30px 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .content {
+    padding: 10px;
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  .pois {
+    @include column-gap(1em);
+    @include column-count(3);
+  }
+}
+
+@media (max-width: 586px) {
+  .tile-row {
+    @include flex-direction(column);
+  }
+
+  .tile-container .tile.tile-small {
+    min-height: 170px;
+  }
+
+  .copy-wrapper.with-sidebar {
+    @include flex-wrap(wrap);
+  }
+
+  .copy-wrapper.with-sidebar .copy {
+    max-width: 100%;
+  }
+
+  .copy-wrapper.with-sidebar .sidebar {
+    max-width: 100%;
+    padding: 0;
+
+  }
+
+  .additional-links {
+    @include flex-wrap(wrap);
+  }
+
+  .additional-links #link-0 {
+    border-right: none;
+    border-bottom: 2px solid $black;
+  }
+
+  .additional-links #link-2 {
+    border-left: none;
+    border-top: 2px solid $black;
+  }
+
+  .rooms-container .room .room-info {
+    padding: 40px 0;
+  }
+}
