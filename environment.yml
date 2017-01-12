@@ -1,0 +1,7 @@
+name: polar
+channels: !!python/tuple
+- defaults
+dependencies:
+  - python=3.5
+  - pip
+
