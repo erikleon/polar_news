@@ -8,6 +8,7 @@ __pycache__/
 
 # Django Files
 settings.py
+polar/migrations/
 
 # Compiled css
 .sass-cache
