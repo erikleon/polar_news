@@ -6,4 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# Django Files
 settings.py
+
+# Compiled css
+.sass-cache
+polar/stylesheets/css/*.css
+.ds_store
