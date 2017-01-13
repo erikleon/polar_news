@@ -10,6 +10,19 @@ Developers: Erik Karwatowski
 ```
 python get-pip.py
 ```
+* Configure Python Environment
+- Install [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
+```
+pip install virtualenv
+```
+- Start python3.5 env in directory of projects
+```
+virtualenv --python=python3.5 PATH/TO/PROJECT
+```
+* Activate python3.5 env
+```
+source PATH/TO/PROJECT/bin/activate
+```
 * Install required python packages
 ```
 pip install requirements.txt
@@ -18,6 +31,10 @@ pip install requirements.txt
 ## Development
 - Copy `polar_news/sample-settings.py` to `polar_news/settings.py` and populate your local MYSQL database, user, and password
 - Prepare local environment
+- Compile css
+```sh
+cd polar/static/stylesheets/ && compass compile compile
+```
 ```
 python manage.py makemigrations
 ```
@@ -27,9 +44,6 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
-- Compile css
-```sh
-cd polar/static/stylesheets/ && compass compile watch
-```
+
 
 
